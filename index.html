@@ -26,8 +26,8 @@
               "custom-grey-2": "rgba(3, 7, 18, 0.2)",
               "custom-light-grey": "rgba(3, 7, 18, 0.1)",
               "custom-black": "rgb(3, 7, 18)",
-              "custom-orange" : "rgb(255, 191, 15)",
-              "custom-pink" : "rgb(247, 140, 156)",
+              "custom-orange": "rgb(255, 191, 15)",
+              "custom-pink": "rgb(247, 140, 156)",
             },
           },
         },
@@ -50,23 +50,35 @@
   </head>
   <body class="bg-primary font-inter">
     <header>
-      <div class="navbar flex justify-between items-center max-w-[82%] mx-auto mt-[3rem]">
+      <div
+        class="navbar flex justify-between items-center max-w-[82%] mx-auto mt-[3rem]"
+      >
         <h1 class="text-[2.3rem] font-bold leading-10">P-Ticket</h1>
         <ul class="flex gap-[3.5rem] text-[1.1rem] text-custom-grey">
-            <li class="border-b-4 border-primary hover:border-custom-green"><a href="">Home</a></li>
-            <li class="border-b-4 border-primary hover:border-custom-green"><a href="">About</a></li>
-            <li class="border-b-4 border-primary hover:border-custom-green"><a href="">Destination</a></li>
-            <li class="border-b-4 border-primary hover:border-custom-green"><a href="">Search</a></li>
+          <li class="border-b-4 border-primary hover:border-custom-green">
+            <a href="">Home</a>
+          </li>
+          <li class="border-b-4 border-primary hover:border-custom-green">
+            <a href="">About</a>
+          </li>
+          <li class="border-b-4 border-primary hover:border-custom-green">
+            <a href="">Destination</a>
+          </li>
+          <li class="border-b-4 border-primary hover:border-custom-green">
+            <a href="">Search</a>
+          </li>
         </ul>
-        <button class="flex justify-center items-center gap-3 border-2 rounded-lg border-custom-light-green bg-custom-light-green-2 py-3 px-8">
-            <p class="text-[1.3rem] text-custom-green">Buy</p>
-            <img src="images/bus-icon.png" alt="">
+        <button
+          class="flex justify-center items-center gap-3 border-2 rounded-lg border-custom-light-green bg-custom-light-green-2 py-3 px-8"
+        >
+          <p class="text-[1.3rem] text-custom-green">Buy</p>
+          <img src="images/bus-icon.png" alt="" />
         </button>
       </div>
 
       <!-- hero section -->
       <div
-        class="hero-section text-center max-w-[81%] mx-auto mt-[3rem] mb-[16rem] relative"
+        class="hero-section text-center max-w-[81%] mx-auto mt-[3rem] mb-[11rem] relative"
       >
         <img src="images/banner.png" alt="banner-img" class="w-full" />
         <div class="absolute top-[10%] max-w-[65%] mx-[16%]">
@@ -74,7 +86,7 @@
             End To End Travel With
           </h1>
           <h1 class="text-[4rem] font-bold leading-[5rem] text-custom-green">
-            P Paribahan
+            PH Paribahan
           </h1>
           <p class="leading-8 text-[1.1rem] my-8 text-white">
             Yes, you can run unit tests and view the results directly within the
@@ -139,34 +151,39 @@
 
     <main>
       <!-- coupon section -->
-      <section class="grid grid-cols-2 gap-6 max-w-[82%] mx-auto">
-        <div class="bg-custom-orange flex rounded-[1.5rem] p-[3rem]">
-            <div>
-                <h1>15% OFF</h1>
-                <p>On your next purpose</p>
-                <p>use by January 2024</p>
+      <section class="max-w-[82%] mx-auto text-center mb-[7rem]">
+        <h1 class="text-[2.5rem] font-bold leading-[3rem] text-custom-black text-center mb-[3rem]">
+          Best offers for you
+        </h1>
+        <div class="grid grid-cols-2 gap-6 mb-[3.5rem]">
+          <div class="bg-custom-orange flex items-center rounded-[1.5rem]">
+            <div class="w-[55%]">
+              <h1 class="font-extrabold text-[2.5rem] leading-9 text-custom-black">15% OFF</h1>
+              <p class="text-[1.3rem] font-semibold leading-9 text-custom-black">On your next purpose</p>
+              <p class="text-[1.1rem] font-medium leading-9 text-custom-grey">use by January 2024</p>
             </div>
-            <img src="images/cupon-devider.png" alt="">
-            <div>
-                <h1>NEW15</h1>
-                <p>Coupon Code</p>
+            <img src="images/cupon-devider.png" alt="" />
+            <div class="mx-auto">
+              <h1 class="text-[1.7rem] font-semibold leading-10 text-custom-black">NEW15</h1>
+              <p class="text-[1.1rem] text-custom-grey">Coupon Code</p>
             </div>
+          </div>
+
+          <div class="bg-custom-pink flex items-center rounded-[1.5rem]">
+            <div class="w-[55%]">
+              <h1 class="font-extrabold text-[2.5rem] leading-9 text-custom-black">20% OFF</h1>
+              <p>On your next purpose</p>
+              <p>use by January 2024</p>
+            </div>
+            <img src="images/cupon-devider.png" alt="" />
+            <div class="mx-auto">
+              <h1 class="text-[1.7rem] font-semibold leading-10 text-custom-black">Couple20</h1>
+              <p class="text-[1.1rem] text-custom-grey">Coupon Code</p>
+            </div>
+          </div>
         </div>
 
-        <div class="bg-custom-pink flex rounded-[1.5rem] p-[3rem]">
-            <div>
-                <h1>20% OFF</h1>
-                <p>On your next purpose</p>
-                <p>use by January 2024</p>
-            </div>
-            <img src="images/cupon-devider.png" alt="">
-            <div>
-                <h1>Couple20</h1>
-                <p>Coupon Code</p>
-            </div>
-        </div>
-        
-        <button class="col-span-2 bg-gray-500">See All Offers</button>
+        <button class="text-custom-green border-2 border-custom-green rounded-xl py-5 px-8 cursor-pointer font-semibold mx-auto">See All Offers</button>
       </section>
 
       <!-- ticket info section -->
@@ -634,25 +651,31 @@
     </main>
 
     <footer class="bg-custom-black px-[8rem] py-[7.5rem] text-white">
-        <div class="flex justify-between pb-12 border-b-2 border-dashed border-gray-700">
-            <div>
-                <h1 class="text-[2.2rem] font-bold leading-10 mb-4">P-Ticket</h1>
-                <p class="text-[1.1rem] leading-8 text-gray-400 max-w-[70%]">P-Ticket is a digital platform to make your daily commuting better.</p>
-            </div>
-            <div>
-                <p class="text-[1.3rem] font-semibold leading-6 mb-5">Download our app</p>
-                <img class="max-w-[11rem]" src="images/google-play.png" alt="">
-            </div>
+      <div
+        class="flex justify-between pb-12 border-b-2 border-dashed border-gray-700"
+      >
+        <div>
+          <h1 class="text-[2.2rem] font-bold leading-10 mb-4">P-Ticket</h1>
+          <p class="text-[1.1rem] leading-8 text-gray-400 max-w-[70%]">
+            P-Ticket is a digital platform to make your daily commuting better.
+          </p>
         </div>
+        <div>
+          <p class="text-[1.3rem] font-semibold leading-6 mb-5">
+            Download our app
+          </p>
+          <img class="max-w-[11rem]" src="images/google-play.png" alt="" />
+        </div>
+      </div>
 
-        <div class="flex justify-between mt-[2rem]">
-            <p>@all rights reserved, P-Ticket services limited.2024</p>
-            <ul class="flex justify-around gap-8">
-                <li><a href="">Terms & condition</a></li>
-                <li><a href="">Return & refund policy</a></li>
-                <li><a href="">Privacy Policy</a></li>
-            </ul>
-        </div>
+      <div class="flex justify-between mt-[2rem]">
+        <p>@all rights reserved, P-Ticket services limited.2024</p>
+        <ul class="flex justify-around gap-8">
+          <li><a href="">Terms & condition</a></li>
+          <li><a href="">Return & refund policy</a></li>
+          <li><a href="">Privacy Policy</a></li>
+        </ul>
+      </div>
     </footer>
 
     <script src="Scripts/script.js"></script>
