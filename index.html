@@ -21,6 +21,7 @@
               primary: "rgb(247, 248, 248)",
               "custom-green": "rgb(29, 209, 0)",
               "custom-light-green": "rgba(29, 209, 0, 0.15)",
+              "custom-light-green-2": "rgba(29, 209, 0, 0.1)",
               "custom-grey": "rgba(3, 7, 18, 0.5)",
               "custom-grey-2": "rgba(3, 7, 18, 0.2)",
               "custom-light-grey": "rgba(3, 7, 18, 0.1)",
@@ -49,7 +50,19 @@
   </head>
   <body class="bg-primary font-inter">
     <header>
-      <div class="navbar"></div>
+      <div class="navbar flex justify-between items-center max-w-[82%] mx-auto mt-[3rem]">
+        <h1 class="text-[2.3rem] font-bold leading-10">P-Ticket</h1>
+        <ul class="flex gap-[3.5rem] text-[1.1rem] text-custom-grey">
+            <li class="border-b-4 border-primary hover:border-custom-green"><a href="">Home</a></li>
+            <li class="border-b-4 border-primary hover:border-custom-green"><a href="">About</a></li>
+            <li class="border-b-4 border-primary hover:border-custom-green"><a href="">Destination</a></li>
+            <li class="border-b-4 border-primary hover:border-custom-green"><a href="">Search</a></li>
+        </ul>
+        <button class="flex justify-center items-center gap-3 border-2 rounded-lg border-custom-light-green bg-custom-light-green-2 py-3 px-8">
+            <p class="text-[1.3rem] text-custom-green">Buy</p>
+            <img src="images/bus-icon.png" alt="">
+        </button>
+      </div>
 
       <!-- hero section -->
       <div
@@ -243,7 +256,7 @@
 
       <!-- booking section -->
       <section
-        class="booking-section md:max-w-[81%] rounded-2xl my-6 mx-auto py-8 pr-8 grid grid-cols-5 bg-white"
+        class="booking-section md:max-w-[81%] rounded-2xl my-6 mb-[7.5rem] mx-auto py-8 pr-8 grid grid-cols-5 bg-white"
       >
         <div
           class="seat-section col-span-3 border-r-2 border-dashed border-custom-grey"
@@ -620,7 +633,27 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer class="bg-custom-black px-[8rem] py-[7.5rem] text-white">
+        <div class="flex justify-between pb-12 border-b-2 border-dashed border-gray-700">
+            <div>
+                <h1 class="text-[2.2rem] font-bold leading-10 mb-4">P-Ticket</h1>
+                <p class="text-[1.1rem] leading-8 text-gray-400 max-w-[70%]">P-Ticket is a digital platform to make your daily commuting better.</p>
+            </div>
+            <div>
+                <p class="text-[1.3rem] font-semibold leading-6 mb-5">Download our app</p>
+                <img class="max-w-[11rem]" src="images/google-play.png" alt="">
+            </div>
+        </div>
+
+        <div class="flex justify-between mt-[2rem]">
+            <p>@all rights reserved, P-Ticket services limited.2024</p>
+            <ul class="flex justify-around gap-8">
+                <li><a href="">Terms & condition</a></li>
+                <li><a href="">Return & refund policy</a></li>
+                <li><a href="">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
 
     <script src="Scripts/script.js"></script>
   </body>
