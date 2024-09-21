@@ -612,20 +612,30 @@
               </div>
             </div>
 
-            <div class="bg-white h-[3.5rem] pr-2 py-2 pl-5 rounded-[0.7rem]">
-              <form class="coupon-form flex items-center justify-between">
+            <div class="justify-between py-4 font-medium hidden" id="discount-info">
+                <div class="text-left"><p>Discount Price</p></div>
+                <div>
+                  <p>- BDT <span id="discount-amount">0</span></p>
+                </div>
+              </div>
+            
+
+            <div class="bg-white h-[3.5rem] pr-2 py-2 pl-5 rounded-[0.7rem]" id="coupon-form">
+              <form class="flex items-center justify-between">
                 <input
                   type="text"
                   placeholder="Have any coupon?"
                   required
                   id="coupon-code"
                   class="focus:outline-none focus:border-none text-[0.9rem]"
+                  disabled
                 />
                 <input
                   type="submit"
                   value="Apply"
                   id="coupon-btn"
-                  class="bg-custom-green text-white font-bold w-[5rem] h-[2.5rem] rounded-md cursor-pointer"
+                  class="bg-custom-grey-2 text-custom-grey font-bold w-[5rem] h-[2.5rem] rounded-md cursor-pointer"
+                  disabled
                 />
               </form>
             </div>
@@ -641,6 +651,7 @@
             <h2 class="mt-[1.5rem] font-semibold">Passenger's Name*</h2>
             <input
               class="mt-4 w-full p-4 border rounded-lg"
+              id="passenger-name"
               type="text"
               placeholder="Enter your name"
               required
@@ -649,6 +660,7 @@
             <h2 class="mt-[1.5rem] font-semibold">Phone Number*</h2>
             <input
               class="mt-4 w-full p-4 border rounded-lg"
+              id="phone-number"
               type="text"
               placeholder="Enter your phone number"
               required
@@ -664,7 +676,9 @@
             <input
               type="submit"
               value="Next"
-              class="block mt-[1.5rem] w-full bg-custom-green text-white font-bold p-4 rounded-2xl cursor-pointer"
+              class="block mt-[1.5rem] w-full bg-custom-grey-2 text-custom-grey font-bold p-4 rounded-2xl cursor-pointer"
+              id="passenger-form"
+              disabled
             />
           </form>
           <div class="grid grid-cols-2 text-center mt-6 cursor-pointer">
@@ -679,14 +693,14 @@
       </section>
 
       <!-- modal section -->
-      <div class="fixed top-0 bg-custom-modal w-full h-full z-50 flex justify-center items-center hidden">
+      <div class="fixed top-0 bg-custom-modal w-full h-full z-50 justify-center items-center hidden" id="modal">
         <div class="bg-white p-12 rounded-2xl shadow-lg max-w-[50%] text-center">
           <img class="w-[5rem] mx-auto" src="images/success.png" alt="">
           <h2 class="text-custom-dark-green text-[1.2rem] font-semibold my-[2rem]">SUCCESS</h2>
           <P class="text-[1.1rem] font-medium text-custom-black mb-5">Thank you for Booking Our Bus Seats. 
             We are working hard to find the best service and deals for you.</P>
             <P class="text-[1.1rem] font-medium text-custom-grey mb-5">Shortly you will find a confirmation in your email.</P>
-            <button class="bg-custom-dark-green font-semibold w-[45%] rounded-[2rem] p-4 text-white">Continue</button>
+            <button class="bg-custom-dark-green font-semibold w-[45%] rounded-[2rem] p-4 text-white" id="modal-btn">Continue</button>
         </div>
       </div>
     </main>
