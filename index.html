@@ -16,6 +16,9 @@
       tailwind.config = {
         theme: {
           extend: {
+            screen: {
+              xl: "1248px",
+            },
             colors: {
               primary: "rgb(247, 248, 248)",
               "custom-green": "rgb(29, 209, 0)",
@@ -50,60 +53,80 @@
     <title>Smart Ticketing</title>
   </head>
   <body class="bg-primary font-inter">
-    <header>
+    <header id="home">
       <div
-        class="navbar flex justify-between items-center lg:max-w-[82%] max-w-[94%] mx-auto lg:mt-[3rem] mt-5"
+        class="navbar fixed top-0 left-0 right-0 z-50 bg-primary flex justify-between items-center lg:px-[9%] px-[4%] mx-auto lg:py-[1.5rem] py-3 border-b-2 border-custom-green"
       >
         <h1 class="lg:text-[2.3rem] text-[2rem] font-bold leading-10">P-Ticket</h1>
         <ul class="lg:flex hidden gap-[3.5rem] text-[1.1rem] text-custom-grey">
           <li class="border-b-4 border-primary hover:border-custom-green">
-            <a href="">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li class="border-b-4 border-primary hover:border-custom-green">
-            <a href="">About</a>
+            <a href="#offers">Offers</a>
           </li>
           <li class="border-b-4 border-primary hover:border-custom-green">
-            <a href="">Destination</a>
+            <a href="#destination">Destination</a>
           </li>
           <li class="border-b-4 border-primary hover:border-custom-green">
-            <a href="">Search</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
-        <button
-          class="lg:flex hidden justify-center items-center gap-3 border-2 rounded-lg border-custom-light-green bg-custom-light-green-2 py-3 px-8"
+        <div class="flex gap-2 justify-center items-center">
+          <a href="#buy">
+            <button
+          class="flex  md:scale-90 lg:scale-100 scale-75 justify-center items-center md:gap-3 gap-1 border-2 rounded-lg border-custom-light-green bg-custom-light-green-2 md:py-3 md:px-8 px-4 py-2"
         >
           <p class="text-[1.3rem] text-custom-green">Buy</p>
           <img src="images/bus-icon.png" alt="" />
         </button>
+          </a>
+        <div class="lg:hidden w-6 h-6 flex justify-center items-center relative">
+          <img src="images/menu.png" alt="menu_icon" class="w-full" id="menu-icon">
+          <img src="images/close.png" alt="close_icon" class="w-4 h-4 hidden" id="close-icon">
+          <div class="absolute hidden bottom-0 left-0 transform -translate-x-[100%] translate-y-[100%] z-50 md:w-[50vw] w-[75vw] text-center rounded-lg p-5 bg-slate-100" id="navbar-mobile">
+            <ul class="text-[1.1rem] font-medium">
+              <li class="my-3 pb-1 border-b-2 border-green-100 hover:border-green-300 mx-[30%] duration-300"><a href="#home">Home</a></li>
+              <li class="my-3 pb-1 border-b-2 border-green-100 hover:border-green-300 mx-[30%] duration-300"><a href="#offers">offers</a></li>
+              <li class="my-3 pb-1 border-b-2 border-green-100 hover:border-green-300 mx-[30%] duration-300"><a href="#destination">Destination</a></li>
+              <li class="my-3 pb-1 border-b-2 border-green-100 hover:border-green-300 mx-[30%] duration-300"><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+
+        
       </div>
 
       <!-- hero section -->
       <div
-        class="hero-section text-center lg:max-w-[82%] max-w-[94%] mx-auto mt-[2rem] lg:mb-[11rem] mb-[4rem] relative"
+        class="hero-section text-center lg:max-w-[82%] max-w-[92%] mx-auto lg:mt-[8rem] mt-[6rem] lg:mb-[11rem] mb-[4rem] relative"
       >
       <div class="lg:w-auto lg:h-auto h-[25rem] flex justify-center items-center">
         <img src="images/banner.png" alt="banner-img" class="h-full object-cover rounded-2xl" />
       </div>
         
-        <div class="absolute top-[10%] lg:max-w-[65%] max-w-[94%] lg:mx-[16%] mx-[3%]">
-          <h1 class="lg:text-[4rem] text-[1.7rem] font-bold lg:leading-[5rem] leading-[2rem] text-white">
+        <div class="absolute xl:top-[10%] lg:top-[2%] top-[6%]  xl:max-w-[66%] lg:max-w-[82%] max-w-[94%] xl:mx-[16%] lg:mx-[9%] mx-[3%] xl:scale-100 lg:scale-75 scale-100">
+          <h1 class="lg:text-[4rem] text-[1.7rem] font-bold lg:leading-[5rem] leading-[2rem] text-white xl:scale-100 lg:scale-75 scale-100">
             End To End Travel With
           </h1>
-          <h1 class="lg:text-[4rem] text-[1.7rem] font-bold lg:leading-[5rem] leading-[2rem] text-custom-green">
+          <h1 class="lg:text-[4rem] text-[1.7rem] font-bold lg:leading-[5rem] leading-[2rem] text-custom-green xl:scale-100 lg:scale-75 scale-100">
             PH Paribahan
           </h1>
-          <p class="lg:leading-8 leading-7 lg:text-[1.1rem] text-[0.9rem] lg:my-8 my-6 text-white">
+          <p class="lg:leading-8 leading-7 lg:text-[1.1rem] text-[0.9rem] xl:my-6 lg:my-3 my-5 px-4 text-white">
             Yes, you can run unit tests and view the results directly within the
             app. The integrated testing features allow for a streamlined .
           </p>
-          <button
-            class="bg-custom-green text-white lg:px-8 px-4 lg:py-5 py-3 lg:text-lg text-sm font-semibold rounded-[0.7rem] cursor-pointer"
+          <a href="#buy">
+            <button
+            class="bg-custom-green text-white lg:px-8 px-4 lg:py-5 py-3 lg:text-lg text-sm font-semibold rounded-[0.7rem] cursor-pointer xl:scale-100 lg:scale-7 scale-100"
           >
             Buy Tickets
           </button>
+          </a>
         </div>
 
-        <div class="grid lg:grid-cols-3 grid-cols-1 lg:ml-[10%] gap-6 lg:absolute -bottom-[4.5rem]">
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-6 lg:absolute left-0 right-0 xl:scale-90 lg:scale-75 scale-90 transform lg:-translate-y-1/2 z-40">
           <div
             class="flex rounded-[1.5rem] p-8 bg-gray-50 gap-4 border-b-4 border-custom-green items-center"
           >
@@ -155,7 +178,7 @@
 
     <main>
       <!-- coupon section -->
-      <section class="lg:max-w-[82%] max-w-[94%] mx-auto text-center lg:mb-[7rem] mb-[3rem]">
+      <section class="lg:max-w-[82%] max-w-[92%] mx-auto text-center lg:mb-[7rem] mb-[3rem]" id="offers">
         <h1
           class="lg:text-[2.5rem] text-[2rem] font-bold lg:leading-[3rem] leading-[2rem] text-custom-black text-center lg:mb-[3rem] mb-8"
         >
@@ -220,7 +243,7 @@
 
       <!-- ticket info section -->
       <section
-        class="pt-[6.5rem] border-t-4 border-custom-green rounded-[5rem]"
+        class="pt-[6.5rem] border-t-4 border-custom-green rounded-[5rem]" id="destination"
       >
         <div class="lg:max-w-[53%] max-w-[94%] mx-auto text-center lg:mb-[3rem] mb-[1rem]">
           <h1
@@ -306,6 +329,7 @@
       <!-- booking section -->
       <section
         class="booking-section lg:max-w-[81%] max-w-[94%] rounded-2xl my-6 lg:mb-[7.5rem] mb-[4rem] mx-auto lg:py-8 py-5 lg:pr-8 grid lg:grid-cols-5 grid-cols-1 bg-white"
+        id="buy"
       >
         <div
           class="seat-section col-span-3 lg:border-r-2 border-dashed border-custom-grey"
@@ -341,7 +365,7 @@
               <i class="fi fi-bs-steering-wheel"></i>
             </button>
 
-            <p class="col-span-1 text-right my-auto">A</p>
+            <p class="col-span-1  lg:-mr-3 md:mr-4 mr-1 text-right my-auto">A</p>
             <button
               class="col-span-2 bg-custom-light-grey hover:bg-custom-grey-2 transition-all duration-150 h-14 rounded-[0.7rem]"
             >
@@ -364,7 +388,7 @@
               A4
             </button>
 
-            <p class="col-span-1 text-right my-auto">B</p>
+            <p class="col-span-1 text-right  lg:-mr-3 md:mr-4 mr-1  my-auto">B</p>
             <button
               class="col-span-2 bg-custom-light-grey hover:bg-custom-grey-2 transition-all duration-150 h-14 rounded-[0.7rem]"
             >
@@ -387,7 +411,7 @@
               B4
             </button>
 
-            <p class="col-span-1 text-right my-auto">C</p>
+            <p class="col-span-1 text-right lg:-mr-3 md:mr-4 mr-1  my-auto">C</p>
             <button
               class="col-span-2 bg-custom-light-grey hover:bg-custom-grey-2 transition-all duration-150 h-14 rounded-[0.7rem]"
             >
@@ -410,7 +434,7 @@
               C4
             </button>
 
-            <p class="col-span-1 text-right my-auto">D</p>
+            <p class="col-span-1 text-right  lg:-mr-3 md:mr-4 mr-1  my-auto">D</p>
             <button
               class="col-span-2 bg-custom-light-grey hover:bg-custom-grey-2 transition-all duration-150 h-14 rounded-[0.7rem]"
             >
@@ -433,7 +457,7 @@
               D4
             </button>
 
-            <p class="col-span-1 text-right my-auto">E</p>
+            <p class="col-span-1 text-right  lg:-mr-3 md:mr-4 mr-1  my-auto">E</p>
             <button
               class="col-span-2 bg-custom-light-grey hover:bg-custom-grey-2 transition-all duration-150 h-14 rounded-[0.7rem]"
             >
@@ -456,7 +480,7 @@
               E4
             </button>
 
-            <p class="col-span-1 text-right my-auto">F</p>
+            <p class="col-span-1 text-right  lg:-mr-3 md:mr-4 mr-1  my-auto">F</p>
             <button
               class="col-span-2 bg-custom-light-grey hover:bg-custom-grey-2 transition-all duration-150 h-14 rounded-[0.7rem]"
             >
@@ -479,7 +503,7 @@
               F4
             </button>
 
-            <p class="col-span-1 text-right my-auto">G</p>
+            <p class="col-span-1 text-right lg:-mr-3 md:mr-4 mr-1 my-auto">G</p>
             <button
               class="col-span-2 bg-custom-light-grey hover:bg-custom-grey-2 transition-all duration-150 h-14 rounded-[0.7rem]"
             >
@@ -502,7 +526,7 @@
               G4
             </button>
 
-            <p class="col-span-1 text-right my-auto">H</p>
+            <p class="col-span-1 text-right  lg:-mr-3 md:mr-4 mr-1 my-auto">H</p>
             <button
               class="col-span-2 bg-custom-light-grey hover:bg-custom-grey-2 transition-all duration-150 h-14 rounded-[0.7rem]"
             >
@@ -525,7 +549,7 @@
               H4
             </button>
 
-            <p class="col-span-1 text-right my-auto">I</p>
+            <p class="col-span-1 text-right  lg:-mr-3 md:mr-4 mr-1 my-auto">I</p>
             <button
               class="col-span-2 bg-custom-light-grey hover:bg-custom-grey-2 transition-all duration-150 h-14 rounded-[0.7rem]"
             >
@@ -548,7 +572,7 @@
               I4
             </button>
 
-            <p class="col-span-1 text-right my-auto">J</p>
+            <p class="col-span-1 text-right lg:-mr-3 md:mr-4 mr-1 my-auto">J</p>
             <button
               class="col-span-2 bg-custom-light-grey hover:bg-custom-grey-2 transition-all duration-150 h-14 rounded-[0.7rem]"
             >
@@ -624,7 +648,7 @@
             
 
             <div class="bg-white h-[3.5rem] pr-2 py-2 lg:pl-5 pl-2 rounded-[0.7rem]" id="coupon-form">
-              <form class="flex items-center justify-between">
+              <form class="flex items-center  justify-between">
                 <input
                   type="text"
                   placeholder="Have any coupon?"
@@ -637,7 +661,7 @@
                   type="submit"
                   value="Apply"
                   id="coupon-btn"
-                  class="bg-custom-grey-2 text-custom-grey font-bold w-[5rem] h-[2.5rem] rounded-md cursor-pointer"
+                  class="bg-custom-grey-2 text-custom-grey font-bold w-[5rem] h-[2.5rem] md:text-base text-xs rounded-md cursor-pointer"
                   disabled
                 />
               </form>
@@ -708,7 +732,7 @@
       </div>
     </main>
 
-    <footer class="bg-custom-black lg:px-[8rem] px-[2rem] py-[2rem] lg:py-[7.5rem]  text-white">
+    <footer class="bg-custom-black lg:px-[8rem] px-[2rem] py-[2rem] lg:py-[7.5rem]  text-white" id="contact">
       <div
         class="flex lg:flex-row flex-col justify-between gap-6 lg:pb-12 pb-8 border-b-2 border-dashed border-gray-700"
       >

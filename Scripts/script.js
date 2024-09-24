@@ -165,3 +165,21 @@ modal.addEventListener('click', function(){
   modal.classList.remove("flex")
   location.reload();
 })
+
+
+// navbar
+const menuIcon = document.getElementById('menu-icon')
+const closeIcon = document.getElementById('close-icon')
+const navbarMobile = document.getElementById('navbar-mobile')
+menuIcon.addEventListener('click', function(event){
+  menuIcon.classList.toggle('hidden')
+  closeIcon.classList.toggle('hidden')
+  navbarMobile.classList.toggle('hidden')
+
+}) 
+
+closeIcon.addEventListener('click', function(event){
+  closeIcon.classList.toggle('hidden')
+  menuIcon.classList.toggle('hidden')
+  navbarMobile.classList.toggle('hidden')
+})
